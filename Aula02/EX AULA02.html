@@ -1,0 +1,87 @@
+<html>
+
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+
+    </body>
+
+    <script>
+
+        // NÃO USAR ABREVIAÇÕES
+        /* Errado pois o código se torna confuso e pode levar a erros de interpretação por quem programa, ou inclusive estaria errado se a função verif_negativo 
+        tivesse que pertencer ao if */
+
+        if (retorno > 0)
+        resultado = 'POSITIVO'
+        verif_negativo();
+
+        
+        /* Correto pois temos o escopo do if bem definido */
+        if (retorno > 0) {
+            resultado = 'POSITIVO'
+            verif_negativo();
+        }
+
+        // Podendo também ser:
+
+        if (retorno > 0) {
+            resultado = 'POSITIVO'
+        }
+        
+        verif_negativo();
+        
+        // Tudo depende se verif_negativo pertence ou não ao if, se pertencer o primeiro exemplo levaria a um erro pois funcionaria como o 3º e não como o 2º
+
+
+
+        //COMENTAR SEMPRE O CÓDIGO
+
+        /* Errado pois se mais tarde voltarmos a trabalhar com esse projeto teremos que reler o código inteiro dessa função para entendermos o que essa ela faz exatamente */
+        function cadastro(){}
+
+        /* Correto pois o comentário descreve o que a função faz sem que seja necessário lê-la, o que otimiza o precioso tempo do programador e faz com ele seja 
+        mais produtivo */
+
+        // função de cadastro de novos usuários
+        function cadastro(){}
+
+
+
+
+        // COLOCAR SCRIPTS SEMPRE AO FINAL DA PÁGINA
+
+        /* A forma como estou fazendo aqui já conta como a correta, melhor é colocar o script ao final do body ou após ele, dessa forma a página é carregada de forma
+        mais rápida, quando o script é pequeno a diferença de carregamento é quase inexistente, mas quando ele é grande a velocidade de carregamento torna-se palpável.
+        Isso se deve ao fato de que o body contém os elementos visuais da página, e se o script é grande e está antes dele o usuário acaba por ter a percepção de que 
+        o carregamento é lento, porém, mesmo que posto no final ou após o body o carregamento tem a mesma velocidade, mas se os elementos visuais aparecem primeiro 
+        na tela, vai aparentar de que a página carregou rápido 
+        */
+
+        // Exemplo :
+
+        /*
+        
+        <html> 
+        
+            <head>
+
+            </head>
+
+                //COLOCAR DAQUI PARA CIMA OU EM MEIO AO BODY ESTÁ ERRADO
+
+            <body>
+
+                //COLOCAR NO FIM DO BODY OU ABAIXO ESTÁ CERTO
+
+            </body>
+
+        </html>
+        
+        */
+
+    </script>
+
+</html>
