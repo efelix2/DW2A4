@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+
+</body>
+
+<script>
+
+    function mercado() {
+        this.local = 'Mercearia do Joseph';
+        this.cpnjVendedor = '53.598.504/0001-11';
+    }
+
+    function categoria(category) {
+        mercado.call(this);
+        this.categoria = category;
+    }
+
+    categoria.prototype=Object.create(mercado.prototype);
+
+    function produto(name){
+        categoria.call(this);
+        this.nome = name;
+    }
+
+    produto.prototype=Object.create(categoria.prototype);
+
+    var prod = new produto('detergente');
+    prod.categoria = 'limpeza';
+
+    console.log(prod);
+
+    </script>
+
+
+</html>
